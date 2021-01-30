@@ -9,11 +9,11 @@ const LatestTranaction = () => {
       orderId: "#SK2540",
       billingName: "Neal Matthews",
       Date: "07 Oct, 2019",
-      total: "$400",
+      total: "5",
       badgeClass: "success",
-      paymentStatus: "Paid",
+      paymentStatus: "Interviewing",
       methodIcon: "fa-cc-mastercard",
-      paymentMethod: "Mastercard",
+      paymentMethod: "John Richards",
       link: "#",
     },
     {
@@ -21,59 +21,11 @@ const LatestTranaction = () => {
       orderId: "#SK2541",
       billingName: "Jamal Burnett",
       Date: "07 Oct, 2019",
-      total: "$380",
+      total: "10",
       badgeClass: "danger",
-      paymentStatus: "Chargeback",
+      paymentStatus: "Finished",
       methodIcon: "fa-cc-visa",
-      paymentMethod: "Visa",
-      link: "#",
-    },
-    {
-      id: "customCheck4",
-      orderId: "#SK2542",
-      billingName: "Juan Mitchell",
-      Date: "06 Oct, 2019",
-      total: "$384",
-      badgeClass: "success",
-      paymentStatus: "Paid",
-      methodIcon: "fa-cc-paypal",
-      paymentMethod: "Paypal",
-      link: "#",
-    },
-    {
-      id: "customCheck5",
-      orderId: "#SK2543",
-      billingName: "Barry Dick",
-      Date: "05 Oct, 2019",
-      total: "$412",
-      badgeClass: "success",
-      paymentStatus: "Paid",
-      methodIcon: "fa-cc-mastercard",
-      paymentMethod: "Mastercard",
-      link: "#",
-    },
-    {
-      id: "customCheck6",
-      orderId: "#SK2544",
-      billingName: "Ronald Taylor",
-      Date: "04 Oct, 2019",
-      total: "$404",
-      badgeClass: "warning",
-      paymentStatus: "Refund",
-      methodIcon: "fa-cc-visa",
-      paymentMethod: "Visa",
-      link: "#",
-    },
-    {
-      id: "customCheck7",
-      orderId: "#SK2545",
-      billingName: "Jacob Hunter",
-      Date: "04 Oct, 2019",
-      total: "$392",
-      badgeClass: "success",
-      paymentStatus: "Paid",
-      methodIcon: "fa-cc-paypal",
-      paymentMethod: "Paypal",
+      paymentMethod: "Maxwell Horner",
       link: "#",
     },
   ]
@@ -82,7 +34,7 @@ const LatestTranaction = () => {
     <React.Fragment>
       <Card>
         <CardBody>
-          <CardTitle className="mb-4">Latest Transaction</CardTitle>
+          <CardTitle className="mb-4">Job Processing</CardTitle>
           <div className="table-responsive">
             <table className="table table-centered table-nowrap mb-0">
               <thead className="thead-light">
@@ -102,12 +54,12 @@ const LatestTranaction = () => {
                       </label>
                     </div>
                   </th>
-                  <th>Order ID</th>
-                  <th>Billing Name</th>
+                  <th>Job Id</th>
+                  <th>Company Name</th>
                   <th>Date</th>
-                  <th>Total</th>
-                  <th>Payment Status</th>
-                  <th>Payment Method</th>
+                  <th>Total Candidates</th>
+                  <th>Interview Status</th>
+                  <th>Top Candidate</th>
                   <th>View Details</th>
                 </tr>
               </thead>
@@ -150,9 +102,6 @@ const LatestTranaction = () => {
                       </Badge>
                     </td>
                     <td>
-                      <i
-                        className={"fab " + transaction.methodIcon + " mr-1"}
-                      ></i>{" "}
                       {transaction.paymentMethod}
                     </td>
                     <td>

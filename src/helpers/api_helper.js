@@ -5,8 +5,8 @@ import accessToken from "./jwt-token-access/accessToken"
 const token = accessToken
 
 //apply base url for axios
-// const API_URL = "http://localhost:8000"
-const API_URL = "https://schabu-backend.azurewebsites.net"
+const API_URL = "http://localhost:8000"
+// const API_URL = "https://schabu-backend.azurewebsites.net"
 
 const axiosApi = axios.create({
   baseURL: API_URL,

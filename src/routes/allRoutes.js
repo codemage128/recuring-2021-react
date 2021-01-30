@@ -19,7 +19,9 @@ import Landing from "../pages/Landing/index"
 //Dashboard
 import UserProfile from "../pages/Authentication/user-profile"
 import Jobs from '../pages/Jobs/JobList'
-// import JobCreate from '../pages/Users/JobCreate'
+import JobCreate from '../pages/Jobs/JobCreate'
+import JobDetail from '../pages/Jobs/JobDetail'
+import JobInterview from "pages/Jobs/JobInterview"
 
 const landingRoutes = [
   { path: "/", exact: true, component: Landing },
@@ -28,13 +30,14 @@ const landingRoutes = [
 const userRoutes = [
   // Recuriter Dashboard
   { path: "/job-list", component: Jobs },
-  // { path: "/job-create", component: JobCreate },
+  { path: "/job-create", component: JobCreate },
+  {path: "/job-detail", component: JobDetail},
   { path: "/dashboard", component: Dashboard },
   { path: "/membership", component: PagesPricing },
   { path: "/profile", component: UserProfile },
 ]
-
 const authRoutes = [
+  {path: "/jobs/:id", component: JobInterview},
   { path: "/logout", component: Logout },
   { path: "/login", component: Login },
   { path: "/forgot-password", component: ForgetPwd },
